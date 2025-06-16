@@ -7,7 +7,7 @@ This project demonstrates how to build a simple GraphQL API with full CRUD opera
 - Built with ASP.NET Core and HotChocolate
 - GraphQL queries and mutations
 - CRUD operations on a `Book` entity
-- Testable via Banana Cake Pop or Postman
+- Testable via Postman
 - In-memory database for simplicity
 
 ---
