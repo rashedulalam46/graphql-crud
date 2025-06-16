@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphQLCrud")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f37415b4fa50ac04e608e09745b586172386a73f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphQLCrud")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphQLCrud")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
