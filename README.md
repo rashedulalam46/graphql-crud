@@ -59,7 +59,7 @@ In the Body, select raw and JSON, then use sample input like:
 
 ```bash
 {
-  "query": "{ users { userId userName email } }"
+  "query": "mutation { addBook(input: { id:1001, title: \"Fulkumari\", author: \"Pinaki Bhattacharya\" }) { id title author } }"
 }
 ```
 
@@ -70,31 +70,21 @@ Request response like:
 ```bash
 {
     "data": {
-        "users": [
+        "books": [
             {
-                "userId": 1001,
-                "userName": "RASHED",
-                "email": "rashed@example.com"
+                "id": 1001,
+                "title": "Sapiens",
+                "author": "Yuval Noah Harari"
             },
             {
-                "userId": 1002,
-                "userName": "JOHN",
-                "email": "john@example.com"
+                "id": 1002,
+                "title": "Fulkumari",
+                "author": "Pinaki Bhattacharya"
             },
             {
-                "userId": 1003,
-                "userName": "KAMAL",
-                "email": "kamal@gmail.com"
-            },
-            {
-                "userId": 1004,
-                "userName": "KEVIN",
-                "email": "kevin@gmail.com"
-            },
-            {
-                "userId": 1005,
-                "userName": "MAIKEL",
-                "email": "maikel@gmail.com"
+                "id": 1003,
+                "title": "History Of Arob",
+                "author": "Kamal Hossain"
             }
         ]
     }
@@ -106,15 +96,20 @@ If validation passes, you’ll get a 200 OK response or a confirmation message d
 ## 📁 Project Structure
 
 ```bash
-graphql/
-├── Queries/
-│   └── UserQuery.cs
-├── Services/
-│   └── UserService.cs
+GraphQLCrud/
+│
 ├── Models/
-│   └── User.cs
-├── Program.cs
-└── server-side-validation.csproj
+│   └── Book.cs            # The data model
+│
+├── Data/
+│   └── AppDbContext.cs    # In-memory EF Core DB context
+│
+├── GraphQL/
+│   ├── Query.cs           # GraphQL queries
+│   └── Mutation.cs        # GraphQL mutations
+│
+└── Program.cs             # App startup and service config
+
 ```
 
 ## 🤝 Contributing
