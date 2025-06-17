@@ -85,7 +85,7 @@ Update a Book:
 
 ```bash
 {
-  "query": "mutation { updateBook(id: 1003, updated: { title: \"Homo Deus\", author: \"Yuval Noah Harari\" }) { id title } }"
+  "query": "mutation { updateBook(id: 1001, updated: { id: 1001, title: \"Homo Deus\", author: \"Yuval Noah Harari\" }) { id title author } }"
 }
 ```
 
@@ -99,7 +99,7 @@ Delete a Book:
 
 ## ✅ Expected Output
 
-Request response like:
+Request response like (for all book):
 
 ```bash
 {
