@@ -81,6 +81,22 @@ Get Book By ID:
 }
 ```
 
+Update a Book:
+
+```bash
+{
+  "query": "mutation { updateBook(id: 1003, updated: { title: \"Homo Deus\", author: \"Yuval Noah Harari\" }) { id title } }"
+}
+```
+
+Delete a Book:
+
+```bash
+{
+  "query": "mutation { deleteBook(id: 1003) }"
+}
+```
+
 ## ✅ Expected Output
 
 Request response like:
