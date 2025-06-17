@@ -57,9 +57,27 @@ http://localhost:5000/graphql
 
 In the Body, select raw and JSON, then use sample input like:
 
+Add a Book:
+
 ```bash
 {
   "query": "mutation { addBook(input: { id:1001, title: \"Fulkumari\", author: \"Pinaki Bhattacharya\" }) { id title author } }"
+}
+```
+
+Get All Books:
+
+```bash
+{
+  "query": "query { books { id title author } }"
+}
+```
+
+Get Book By ID:
+
+```bash
+{
+  "query": "query { bookById(id: 1001) { id, title author } }"
 }
 ```
 
